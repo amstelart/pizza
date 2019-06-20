@@ -1,0 +1,32 @@
+// В этом файле должны быть стили для БЭМ-блока main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    @include container;
+  }
+
+  &__heading {
+    font-family: 'Intro';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 31px;
+    letter-spacing: 1.3px;
+    color: hsl(274, 66%, 26%);
+    text-transform: uppercase;
+  }
+
+  &__catalog {
+    @include row;
+
+    .card {
+      @include col;
+      @include col(lg, 3);
+      margin-bottom: 30px;
+    }
+  }
+}

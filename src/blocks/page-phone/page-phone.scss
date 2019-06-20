@@ -1,0 +1,19 @@
+// В этом файле должны быть стили для БЭМ-блока page-phone, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-phone {
+
+  $block-name:                &; // #{$block-name}__element
+
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1.17px;
+
+  span {
+    font-weight: 500;
+  }
+}

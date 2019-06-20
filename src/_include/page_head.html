@@ -1,0 +1,23 @@
+<!--DEV Такой комментарий не попадет в собранный HTML
+<meta name="viewport" content="width=1000">
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--DEV Edge и ряд мобильных браузеров автоматом преобразуют телефоны в ссылки. Отключим это. -->
+<meta name="format-detection" content="telephone=no">
+
+<!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+<!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+<link rel="shortcut icon" href="img/favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+<link href="css/style.min.css" rel="stylesheet" media="screen">
+
+<script>
+  // Маркер работающего javascript
+  document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+  @@include('../blocks/is-mobile/is-mobile--to-head.js')
+</script>
+
+<!--DEV Перед </head> при сборке будут вставлены ссылки на favicon и служебные файлы -->

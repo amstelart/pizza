@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока page-part, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.page-part {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrap {
+    @include container;
+  }
+
+  &__inner {
+    @include row;
+
+    .resources-card {
+      @include col();
+      @include col(lg, 6);
+    }
+  }
+
+  &__about-col {
+    @include col();
+    @include col(lg, 7);
+  }
+
+  &__news-col {
+    @include col();
+    @include col(lg, 5);
+  }
+
+  &__heading {
+    color: rgb(86, 86, 86);
+  }
+}

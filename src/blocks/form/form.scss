@@ -1,0 +1,37 @@
+// В этом файле должны быть стили для БЭМ-блока form, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$font-family--headings:       -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif !default;
+
+$font-size--h3:               1.5em !default;
+
+$line-height:                 1.375em !default;
+
+.form {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__fieldset {
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    &:not(:last-child) {
+      margin-bottom: $line-height;
+    }
+  }
+
+  &__legend {
+    display: block;
+    width: 100%;
+    margin-top: $line-height;
+    margin-bottom: ($line-height / 2);
+    font-size: $font-size--h3;
+    font-family: $font-family--headings;
+    font-weight: 700;
+    line-height: $line-height;
+    color: currentColor;
+  }
+}

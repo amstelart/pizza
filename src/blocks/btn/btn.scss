@@ -1,0 +1,130 @@
+// В этом файле должны быть стили для БЭМ-блока btn, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+$gray-lighter:                hsl(0, 0%, 80%) !default;
+$gray-lightest:               hsl(0, 0%, 90%) !default;
+$text-color:                  hsl(0, 0%, 10%) !default;
+$line-height:                 1.375em;
+
+$field-padding-vertical:      0.3em !default;
+$field-padding-horizontal:    0.7em !default;
+
+$border-radius:               3px !default;
+
+.btn {
+
+  $block-name:                &; // #{$block-name}__element
+
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 0;
+  padding: $field-padding-vertical  $field-padding-horizontal;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  font-size: 1em;
+  font-family: inherit;
+  line-height: $line-height;
+  text-decoration: none;
+  text-transform: none;
+  color: $text-color;
+  border-radius: $border-radius;
+  border: 1px solid $gray-lighter;
+  background-color: $gray-lightest;
+  background-image: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: $text-color;
+    background-color: darken($gray-lightest, 10%);
+    border-color: darken($gray-lighter, 12%);
+  }
+
+  &:active,
+  &:focus {
+    @include field-focus;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: $opacity;
+    cursor: not-allowed;
+    color: $text-color;
+    background-color: $gray-lightest;
+    border-color: $gray-lighter;
+
+    @at-root a.btn--disabled {
+      pointer-events: none;
+    }
+  }
+
+  // &__icon {
+  //   display: inline-block;
+  //   vertical-align: middle;
+  // }
+
+
+
+  // &--main {
+  //   color: #fff;
+  //   background-color: $color-main;
+  //   border: 1px solid $color-main;
+
+  //   &:hover,
+  //   &:focus {
+  //     color: #fff;
+  //     background-color: darken($color-main, 10%);
+  //     border-color: darken($color-main, 12%);
+  //   }
+
+  //   &--disabled,
+  //   &:disabled {
+  //     color: #fff;
+  //     background-color: $color-main;
+  //     border-color: $color-main;
+  //   }
+  // }
+
+    &--main {
+    padding: 8px 20px 5px;
+    font-family: $font-family;
+    color: $white;
+    background-color: #3ab12b;
+    border: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    transform: skewX(20deg);
+    border-radius: 21px;
+    font-size: 21px;
+    letter-spacing: 0.88px;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.47);
+    background-image: linear-gradient(to left, #89be1c, #86be1c 2%, #33b31c);
+
+    span {
+      transform: skewX(-20deg);
+      display: block;
+    }
+
+    #{$block-name}__icon {
+      margin-right: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background-color: darken($color-main, 10%);
+      border-color: darken($color-main, 12%);
+    }
+
+    &--disabled,
+    &:disabled {
+      color: #fff;
+      background-color: $color-main;
+      border-color: $color-main;
+    }
+  }
+}
