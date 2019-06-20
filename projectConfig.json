@@ -64,7 +64,8 @@
     "page-wt": [],
     "card": [],
     "page-basket": [],
-    "catalog-menu": []
+    "catalog-menu": [],
+    "field-num": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

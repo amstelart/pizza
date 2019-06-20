@@ -4,10 +4,10 @@ $( document ).ready(function() {
       items: 1,
       autoplay: true,
       smartSpeed:1000,
-      autoplayTimeout:2000,
+      autoplayTimeout:5000,
       nav: false,
       dots: false,
-      loop: false,
+      loop: true,
       center: false
     });
 });
