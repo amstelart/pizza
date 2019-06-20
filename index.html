@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Intersoft</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <div class="page-header__cont">
+            <div class="page-header__cont-top">
+              <div class="page-info-line">СКИДКА 20% на все пиццы до конца мая!</div>
+              <div class="page-wt page-wt--header">
+                <div class="page-wt__item">
+                  <span>Вс-чт</span>10:00-22:00
+                </div>
+                <div>
+                  <span>Пт-сб</span>10:00-23:00
+                </div>
+              </div>
+            </div>
+            <div class="page-header__cont-bottom">
+              <a href="/" class="logo">
+                <img src="img/logo.svg" alt="logo">
+              </a>
+              <a class="page-phone page-phone--header" href="tel:+88007771711"><span>+ 8 800</span> 777 17 11</a>
+              <nav id="main-nav" class="main-nav main-nav--header" role="navigation">
+                <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+                <ul class="main-nav__list">
+                  <li class="main-nav__item main-nav__item--active">
+                    <a href="#" class="main-nav__link">
+                      Акции
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">
+                      Доставка и оплата
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">
+                      О нас
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="page-basket">
+
+          </div>
+        </div>
+        <div class="page-header__slider">
+          <img src="img/slider-item-img.png" alt="">
+        </div>
+        <nav class="catalog-menu">
+          <ul class="catalog-menu__list">
+            <li class="catalog-menu__item catalog-menu__item--active">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-pizza"></use></svg>
+                <span class="catalog-menu__name">Пицца</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-snacks"></use></svg>
+                <span class="catalog-menu__name">Закуски</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-salads"></use></svg>
+                <span class="catalog-menu__name">Салаты</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-drinks"></use></svg>
+                <span class="catalog-menu__name">Напитки</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dessert"></use></svg>
+                <span class="catalog-menu__name">Десерты</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main class="main" role="main">
+
+        <div class="main__inner">
+          <h1 class="main__heading">Пицца</h1>
+          <div class="main__catalog">
+            <article class="card">
+              <div class="card__inner">
+                <span class="card__img-wrap">
+                  <img src="img/card-img.png" alt="" class="card__img" alt="Товар">
+                </span>
+                <h3 class="card__title">Кранчабунгас</h3>
+                <div class="card__toggle">
+                  <a class="item active" href="#">Средняя 25см</a>
+                  <a class="item" href="#">Большая 35см</a>
+                </div>
+                <p class="card__description">Моцарелла,томаты, лук, соленые огурчики, сырный соуc, ранч соус, кетчуп, пеперонни,салями</p>
+                <div class="card__footer">
+                  <div class="card__price"><span>580</span>₽</div>
+                  <a class="btn btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Взять</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <span class="card__img-wrap">
+                  <img src="img/card-img.png" alt="" class="card__img" alt="Товар">
+                </span>
+                <h3 class="card__title">Кранчабунгас</h3>
+                <div class="card__toggle">
+                  <a class="item active" href="#">Средняя 25см</a>
+                  <a class="item" href="#">Большая 35см</a>
+                </div>
+                <p class="card__description">Моцарелла,томаты, лук, соленые огурчики, сырный соуc, ранч соус, кетчуп, пеперонни,салями</p>
+                <div class="card__footer">
+                  <div class="card__price"><span>580</span>₽</div>
+                  <a class="btn btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Взять</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <span class="card__img-wrap">
+                  <img src="img/card-img.png" alt="" class="card__img" alt="Товар">
+                </span>
+                <h3 class="card__title">Кранчабунгас</h3>
+                <div class="card__toggle">
+                  <a class="item active" href="#">Средняя 25см</a>
+                  <a class="item" href="#">Большая 35см</a>
+                </div>
+                <p class="card__description">Моцарелла,томаты, лук, соленые огурчики, сырный соуc, ранч соус, кетчуп, пеперонни,салями</p>
+                <div class="card__footer">
+                  <div class="card__price"><span>580</span>₽</div>
+                  <a class="btn btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Взять</span></a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__inner">
+                <span class="card__img-wrap">
+                  <img src="img/card-img.png" alt="" class="card__img" alt="Товар">
+                </span>
+                <h3 class="card__title">Кранчабунгас</h3>
+                <div class="card__toggle">
+                  <a class="item active" href="#">Средняя 25см</a>
+                  <a class="item" href="#">Большая 35см</a>
+                </div>
+                <p class="card__description">Моцарелла,томаты, лук, соленые огурчики, сырный соуc, ранч соус, кетчуп, пеперонни,салями</p>
+                <div class="card__footer">
+                  <div class="card__price"><span>580</span>₽</div>
+                  <a class="btn btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Взять</span></a>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p> -->
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <a class="page-phone page-phone--footer" href="tel:+88007771711"><span>8 800</span> 777 17 11</a>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Доставка и оплата
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-wt page-wt--footer">
+            <div class="page-wt__item">
+              <span>Вс-чт</span>10:00-22:00
+            </div>
+            <div>
+              <span>Пт-сб</span>10:00-23:00
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
