@@ -1,7 +1,16 @@
 // Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
+$( document ).ready(function() {
+    $("#header-slider").owlCarousel({
+      items: 1,
+      autoplay: true,
+      smartSpeed:1000,
+      autoplayTimeout:2000,
+      nav: false,
+      dots: false,
+      loop: false,
+      center: false
+    });
+});
 
 // Изоляция без jQuery
 // (function(){

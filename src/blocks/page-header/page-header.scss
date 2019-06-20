@@ -18,6 +18,7 @@
 
     .page-basket {
       position: absolute;
+      z-index: 3;
       right: 0;
       top: -18px;
     }
@@ -60,6 +61,15 @@
     .main-nav--header {
       margin-left: auto;
       margin-top: 15px;
+    }
+  }
+
+  &__slider {
+
+    .slider-item {
+      height: 407px;
+      background-size: cover;
+      background-position: center center;
     }
   }
 }
