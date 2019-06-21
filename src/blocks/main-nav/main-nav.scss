@@ -24,6 +24,10 @@ $transition-time:             0.3s !default;
   position: relative;
   z-index: 10;
 
+  @media (max-width: ($menu-desktop-width - 1)) {
+    display: none;
+  }
+
   // первый уровень
   &__list {
     margin: 0;
@@ -61,15 +65,16 @@ $transition-time:             0.3s !default;
 
       & > #{$block-name}__link {
         color: #ff0000;
+        font-weight: 700;
       }
     }
   }
 
   &__link {
-    font-family: 'Futura PT Book';
+    font-family: 'Futura PT';
     display: block;
     padding: 0.5em;
-    font-size: 11px;
+    font-size: 9px;
     letter-spacing: 0.54px;
     text-decoration: none;
     color: #fff;
@@ -93,6 +98,10 @@ $transition-time:             0.3s !default;
       @media (max-width: ($menu-desktop-width - 1)) {
         padding-left: 2.4em;
       }
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 11px;
     }
   }
 

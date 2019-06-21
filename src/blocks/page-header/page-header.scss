@@ -7,21 +7,21 @@
   $block-name:                &; // #{$block-name}__element
 
   background: $gray-darkest;
-
   position: relative;
 
   &__inner {
     @include container;
     display: flex;
-    padding-right: 280px;
+    padding-right: 220px;
     position: relative;
 
-    .page-basket {
-      position: absolute;
-      z-index: 3;
-      right: 0;
-      top: 0;
-      // top: -18px;
+    @media (min-width: $screen-lg) {
+      padding-right: 280px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      flex-direction: column;
+      padding-right: 15px;
     }
   }
 
@@ -46,7 +46,14 @@
     }
 
     .page-wt--header {
-      margin-top: 15px;
+
+      @media (min-width: $screen-lg) {
+        margin-top: 15px;
+      }
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none;
     }
   }
 
@@ -56,12 +63,28 @@
     align-items: center;
 
     .logo {
-      margin-right: 40px;
+      margin-right: 25px;
+      max-width: 162px;
+
+      @media (min-width: $screen-lg) {
+        margin-right: 40px;
+        max-width: 223px;
+      }
+
+      @media (max-width: ($menu-desktop-width - 1)) {
+        margin-right: auto;
+        width: 100px;
+      }
     }
 
     .main-nav--header {
       margin-left: auto;
       margin-top: 15px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      margin-top: 0;
+      height: 36px;
     }
   }
 
@@ -71,6 +94,46 @@
       height: 407px;
       background-size: cover;
       background-position: center center;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+    background-color: hsl(50, 100%, 56%);
+  }
+
+  &__mobile {
+    background-color: hsl(0, 0%, 11%);
+    margin-left: -15px;
+    margin-right: -15px;
+    height: 51px;
+    display: flex;
+  }
+
+  &__mobile-l,
+  &__mobile-r {
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      min-width: 80px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__mobile-l {
+    @media (max-width: ($menu-desktop-width - 1)) {
+      padding-left: 16px;
+      justify-content: flex-start;
+    }
+  }
+
+  &__mobile-r {
+    @media (max-width: ($menu-desktop-width - 1)) {
+      padding-right: 16px;
+      justify-content: flex-end;
     }
   }
 }

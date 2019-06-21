@@ -1,5 +1,6 @@
 // Если на проекте jQuery
 $( document ).ready(function() {
+
     $("#header-slider").owlCarousel({
       items: 1,
       autoplay: true,
@@ -10,6 +11,15 @@ $( document ).ready(function() {
       loop: true,
       center: false
     });
+
+    //toggle menu
+  	$('#catalog-menu-toggler').click(function (event) {
+  		$('catalog-menu').removeClass('catalog-menu--open');
+  		$('.catalog-menu').toggleClass('catalog-menu--open');
+
+  		event.stopPropagation();
+  	});
+  	//toggle menu end
 });
 
 // Изоляция без jQuery

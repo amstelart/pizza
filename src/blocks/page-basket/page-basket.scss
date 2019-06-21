@@ -6,12 +6,25 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  width: 265px;
-  height: 177px;
-  background-image: svg-load('../blocks/page-basket/img_to_bg/basket-bg-pattern.svg');
-  background-repeat: no-repeat;
-  background-position: center top -20px;
-  transition: all $transition-time;
+  @media (min-width: $menu-desktop-width) {
+    width: 220px;
+    height: 177px;
+    background-image: svg-load('../blocks/page-basket/img_to_bg/basket-bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-position: center top -20px;
+    transition: all $transition-time;
+    background-size: 246px 152px;
+    position: absolute;
+    z-index: 3;
+    right: 0;
+    top: 0;
+  }
+
+  @media (min-width: $screen-lg) {
+    padding-right: 280px;
+    width: 265px;
+    background-size: auto;
+  }
 
   &:hover {
     background-position: center top -5px;
@@ -19,16 +32,20 @@
 
   &__inner {
     text-decoration: none;
-    padding: 10px;
-    align-items: center;
-    display: flex;
-    position: absolute;
-    top: 25px;
-    left: 50%;
-    transform: translateX(-50%);
+
+    @media (min-width: $menu-desktop-width) {
+      padding: 10px;
+      align-items: center;
+      display: flex;
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   &__count {
+    display: block;
     width: 31px;
     height: 31px;
     background-image: svg-load('../blocks/page-basket/img_to_bg/basket-icon.svg');
@@ -59,6 +76,10 @@
     &:before {
       content: "=";
       margin-right: 4px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none;
     }
   }
 }

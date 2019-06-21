@@ -5,16 +5,19 @@
 .catalog-menu {
 
   $block-name:                &; // #{$block-name}__element
-  position: absolute;
   z-index: 1;
   display: flex;
   justify-content: center;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  opacity: 0.9;
-  box-shadow: 0 2px 7px 1px hsla(0, 0%, 0%, 0.48);
-  background-image: linear-gradient(to right, hsl(256, 54%, 47%), hsl(255, 98%, 58%) 46%, hsl(275, 53%, 57%));
+
+  @media (min-width: $menu-desktop-width) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    opacity: 0.9;
+    box-shadow: 0 2px 7px 1px hsla(0, 0%, 0%, 0.48);
+    background-image: linear-gradient(to right, hsl(256, 54%, 47%), hsl(255, 98%, 58%) 46%, hsl(275, 53%, 57%));
+  }
 
   &__list {
     list-style: none;
@@ -35,6 +38,7 @@
     &--active {
 
       #{$block-name}__link {
+
         &:before {
           position: absolute;
           content: "";
@@ -46,6 +50,10 @@
           mix-blend-mode: multiply;
           background-color: hsl(0, 100%, 50%);
           transition: all $transition-time;
+        }
+
+        @media (max-width: ($menu-desktop-width - 1)) {
+          background-color: hsl(272, 99%, 54%);
         }
       }
     }
@@ -76,13 +84,32 @@
         opacity: 0.3;
       }
     }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: hsl(272, 65%, 28%);
+
+      &::before {
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: hsl(272, 99%, 54%);
+      }
+    }
   }
 
   &__icon {
-    position: relative;
-    z-index: 1;
-    display: block;
-    margin: auto;
+
+    @media (min-width: $menu-desktop-width) {
+      position: relative;
+      z-index: 1;
+      display: block;
+      margin: auto;
+    }
   }
 
   &__name {
@@ -95,5 +122,49 @@
     letter-spacing: -0.28px;
     color: #fff;
     text-align: center;
+  }
+
+  &__toggler {
+    background-color: hsl(272, 99%, 54%);
+    border:none;
+    color: #fff;
+    font-family: 'Futura PT';
+    letter-spacing: 1.17px;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    flex-grow: 1;
+    cursor: pointer;
+
+    span {
+
+      svg {
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+    }
+
+    @media (min-width: $menu-desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: ($menu-desktop-width - 1)) {
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    z-index: 100;
+    display: none;
+
+    #{$block-name}__list {
+      flex-direction: column;
+    }
+
+    &--open {
+      display: block !important;
+    }
   }
 }
