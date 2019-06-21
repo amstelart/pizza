@@ -91,6 +91,8 @@ $border-radius:               3px !default;
 
     &--main {
     padding: 8px 20px 5px;
+    overflow: hidden;
+    position: relative;
     font-family: $font-family;
     color: $white;
     background-color: #3ab12b;
@@ -102,22 +104,41 @@ $border-radius:               3px !default;
     font-size: 21px;
     letter-spacing: 0.88px;
     box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.47);
-    background-image: linear-gradient(to left, #89be1c, #86be1c 2%, #33b31c);
+    background-image: linear-gradient(to left, #89be1c 2%, #33b31c);
+    transition: box-shadow $transition-time;
 
     span {
       transform: skewX(-20deg);
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
     #{$block-name}__icon {
       margin-right: 10px;
     }
 
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to left, #5f2bfd, #9b57cb);
+      opacity: 0;
+      transition: opacity 0.2s;
+      z-index: -1;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
     &:hover,
     &:focus {
       color: #fff;
-      background-color: darken($color-main, 10%);
-      border-color: darken($color-main, 12%);
+      box-shadow: 0 4px 15px rgba(71, 122, 251, 0.3), 0 1px 15px rgba(115, 124, 148, 0.3);
     }
 
     &--disabled,
