@@ -112,4 +112,21 @@
       font-weight: 700;
     }
   }
+
+  &--new {
+
+    position: relative;
+
+    #{$block-name}__new-icon {
+      width: 62px;
+      height: 74px;
+      background-image: svg-load('../blocks/card/img_to_bg/card-new.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: calc(50% - 120px);
+    }
+  }
 }
