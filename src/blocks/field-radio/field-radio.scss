@@ -14,6 +14,7 @@ $line-height:                 1.375em !default;
   &__title {
     display: block;
     font-weight: 700;
+    font-family: 'Futura PT';
     line-height: $line-height;
     margin-bottom: 0.4em;
   }
@@ -31,6 +32,7 @@ $line-height:                 1.375em !default;
     padding-left: 1.5em;
     margin-right: 0.6em;
     font-weight: 400;
+    font-size: 16px;
     line-height: $line-height;
   }
 
@@ -63,24 +65,24 @@ $line-height:                 1.375em !default;
       left: 0;
       width: 14px;
       height: 14px;
-      border: 2px solid currentColor;
+      border: 1px solid #000;
       border-radius: 50%;
     }
 
     @at-root input:focus ~ &:before {
-      @include field-focus;
+      // @include field-focus;
     }
 
     &:after {
       content: '';
       position: absolute;
-      top: calc(0.1em + 4px);
-      left: 4px;
-      width: 6px;
-      height: 6px;
+      top: 0.1em;
+      left: 0;
+      width: 15px;
+      height: 15px;
       opacity: 0;
       border-radius: 50%;
-      background-color: currentColor;
+      background-color: hsl(272, 99%, 54%);
       transition: opacity $transition-time;
 
       @at-root input:checked ~ & {

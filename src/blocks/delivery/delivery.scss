@@ -1,0 +1,21 @@
+// В этом файле должны быть стили для БЭМ-блока delivery, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.delivery {
+
+  $block-name:                &; // #{$block-name}__element
+
+  .field-row {
+    @include row;
+
+    .field-col {
+      @include col;
+      @include col(md, 6);
+    }
+  }
+
+  .field-actions {
+    text-align: right;
+  }
+}

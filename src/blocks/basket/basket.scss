@@ -1,0 +1,119 @@
+// В этом файле должны быть стили для БЭМ-блока basket, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__el {
+    display: flex;
+    padding: 15px 10px;
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  &__el-info {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    margin-right: 20px;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__el-change {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+    margin-right: 20px;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    margin-right: auto;
+  }
+
+  &__name-text {
+    font-family: 'Futura PT';
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.58px;
+    text-transform: uppercase;
+  }
+
+  &__price-per-item {
+    font-size: 18px;
+    letter-spacing: 0.75px;
+    color: hsl(0, 0%, 59%);
+    margin-right: 40px;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none;
+    }
+  }
+
+  .field-num--basket {
+    @media (max-width: ($menu-desktop-width - 1)) {
+      margin-left: auto;
+      margin-right: 20px;
+    }
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.84px;
+    color: #000;
+    margin-right: 6px;
+  }
+}
+
+.basket-footer {
+  padding-left: 85px;
+  padding-right: 15px;
+}
+
+.basket-delivery {
+  display: flex;
+  font-family: 'Futura PT';
+  font-size: 11px;
+  letter-spacing: 0.54px;
+  padding: 10px 0;
+
+  &__text {
+    margin-right: auto;
+  }
+}
+
+.basket-total {
+  display: flex;
+  color: #000;
+  padding-top: 10px;
+  padding-bottom: 50px;
+
+  &__text {
+    margin-right: auto;
+    font-family: 'Futura PT';
+    font-size: 19px;
+    letter-spacing: 0.93px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.17px;
+  }
+}
+
+.basket-get {
+  text-align: right;
+}

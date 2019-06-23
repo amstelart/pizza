@@ -65,7 +65,9 @@
     "card": [],
     "page-basket": [],
     "catalog-menu": [],
-    "field-num": []
+    "field-num": [],
+    "delivery": [],
+    "basket": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

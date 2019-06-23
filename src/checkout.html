@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Donatello PIZZA</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main" role="main">
+
+        <div class="main__inner">
+          <div class="container-narrow">
+            <h1 class="main__heading">Корзина</h1>
+            <div class="basket">
+              <!-- <div class="basket-empty">
+                <div class="basket-empty__title">Ваша корзина пуста.</div>
+                <div class="basket-empty__text">Добавь интересующие товары из меню сайта</div>
+              </div> -->
+              <div class="basket-container">
+                <div class="basket__el">
+                  <div class="basket__el-info">
+                    <div class="basket__img" style="background-image:url('img/card-img.png')"></div>
+                    <div class="basket__name">
+                      <div class="basket__name-text">КРАНЧАБУНГАС</div>
+                    </div>
+                    <div class="basket__price-per-item">510₽</div>
+                    <div class="field-num field-num--basket">
+                      <span class="field-num__input-wrap">
+                        <span class="field-num__input-and-btns">
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <input class="field-num__input" type="number" value="2" name="quantity" max="10" min="1" step="1">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket__el-change">
+                    <div class="basket__price">1020₽</div>
+                    <div class="basket__delete close"><span></span></div>
+                  </div>
+                </div>
+                <div class="basket__el">
+                  <div class="basket__el-info">
+                    <div class="basket__img" style="background-image:url('img/card-img.png')"></div>
+                    <div class="basket__name">
+                      <div class="basket__name-text">КРАНЧАБУНГАС</div>
+                    </div>
+                    <div class="basket__price-per-item">510₽</div>
+                    <div class="field-num field-num--basket">
+                      <span class="field-num__input-wrap">
+                        <span class="field-num__input-and-btns">
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <input class="field-num__input" type="number" value="2" name="quantity" max="10" min="1" step="1">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket__el-change">
+                    <div class="basket__price">1020₽</div>
+                    <div class="basket__delete close"><span></span></div>
+                  </div>
+                </div>
+                <div class="basket__el">
+                  <div class="basket__el-info">
+                    <div class="basket__img" style="background-image:url('img/card-img.png')"></div>
+                    <div class="basket__name">
+                      <div class="basket__name-text">КРАНЧАБУНГАС</div>
+                    </div>
+                    <div class="basket__price-per-item">510₽</div>
+                    <div class="field-num field-num--basket">
+                      <span class="field-num__input-wrap">
+                        <span class="field-num__input-and-btns">
+                          <button class="field-num__btn field-num__btn--plus" type="button">+</button>
+                          <button class="field-num__btn field-num__btn--minus" type="button">-</button>
+                          <input class="field-num__input" type="number" value="2" name="quantity" max="10" min="1" step="1">
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="basket__el-change">
+                    <div class="basket__price">1020₽</div>
+                    <div class="basket__delete close"><span></span></div>
+                  </div>
+                </div>
+              </div>
+              <!--basket-footer-->
+              <div class="basket-footer">
+                <div class="basket-delivery">
+                  <div class="basket-delivery__text">Доставка (Бесплатно от 400р)</div>
+                  <div class="basket-delivery__value">Бесплатно</div>
+                </div>
+                <div class="basket-total">
+                  <div class="basket-total__text">Все вместе:</div>
+                  <div class="basket-total__price">3060₽</div>
+                </div>
+                <div class="basket-get">
+                  <a class="btn btn--mw btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Дальше</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('_include/page_bottom.html')
+</body>
+
+</html>

@@ -102,4 +102,8 @@
       background-color: lighten($color-danger, 35%);
     }
   }
+
+  &--basket {
+    margin-bottom: 0;
+  }
 }

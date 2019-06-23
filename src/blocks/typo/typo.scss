@@ -50,7 +50,7 @@ $border-radius:               3px !default;
 }
 
 @font-face {
-    font-family: 'Futura PT Book';
+    font-family: 'Futura PT';
     src: url('../fonts/FuturaPT-Book.eot');
     src: local('Futura PT Book'), local('FuturaPT-Book'),
         url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
@@ -276,4 +276,10 @@ pre {
   width: 100%;
   overflow-x: auto;
   tab-size: 2;
+}
+
+.text-lead {
+	font-family: 'Futura PT';
+	font-size: 18px;
+	letter-spacing: 0.88px;
 }
