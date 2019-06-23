@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Donatello PIZZA</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <div class="page-header__cont">
+            <div class="page-header__cont-top">
+              <div class="page-info-line">СКИДКА 20% на все пиццы до конца мая!</div>
+              <div class="page-wt page-wt--header">
+                <div class="page-wt__item">
+                  <span>Вс-чт</span>10:00-22:00
+                </div>
+                <div>
+                  <span>Пт-сб</span>10:00-23:00
+                </div>
+              </div>
+            </div>
+            <div class="page-header__cont-bottom">
+              <a href="/" class="logo">
+                <img src="img/logo.svg" alt="logo">
+              </a>
+              <a class="page-phone page-phone--header" href="tel:+88007771711"><span>+ 8 800</span> 777 17 11</a>
+              <nav id="main-nav" class="main-nav main-nav--header" role="navigation">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item main-nav__item--active">
+                    <a href="#" class="main-nav__link">
+                      Акции
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="delivery.html" class="main-nav__link">
+                      Доставка и оплата
+                    </a>
+                  </li>
+                  <li class="main-nav__item">
+                    <a href="#" class="main-nav__link">
+                      О нас
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="page-header__mobile">
+            <div class="page-header__mobile-l">
+              <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            </div>
+            <button id="catalog-menu-toggler" class="catalog-menu__toggler"><span><svg class="btn__icon" width="9" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Меню</span></button>
+            <div class="page-header__mobile-r">
+              <div class="page-basket">
+                <a href="#" class="page-basket__inner">
+                  <span class="page-basket__count"><span>2</span></span>
+                  <span class="page-basket__cost"><span>1320 р</span></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__slider owl-carousel" id="header-slider">
+          <div class="slider-item" style="background-image: url('img/slider-item-img.png');"></div>
+          <div class="slider-item" style="background-image: url('img/slider-item-img.png');"></div>
+          <div class="slider-item" style="background-image: url('img/slider-item-img.png');"></div>
+        </div>
+        <nav class="catalog-menu">
+          <ul class="catalog-menu__list">
+            <li class="catalog-menu__item catalog-menu__item--active">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-pizza"></use></svg>
+                <span class="catalog-menu__name">Пицца</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-snacks"></use></svg>
+                <span class="catalog-menu__name">Закуски</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-salads"></use></svg>
+                <span class="catalog-menu__name">Салаты</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-drinks"></use></svg>
+                <span class="catalog-menu__name">Напитки</span>
+              </a>
+            </li>
+            <li class="catalog-menu__item">
+              <a href="#" class="catalog-menu__link">
+                <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dessert"></use></svg>
+                <span class="catalog-menu__name">Десерты</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+
+      <main class="main" role="main">
+
+        <div class="main__inner">
+          <div class="container-narrow">
+            <h1 class="main__heading">Доставка</h1>
+            <form class="delivery" action="">
+              <div class="field-map">
+                <p class="text-lead">Отметить на карте адрес доставки:</p>
+                <div style="width: 100%;position: relative;"><iframe width="100%" height="220"
+                    src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=%D0%9D%D0%B8%D0%B6%D0%BD%D0%B8%D0%B9%20%D0%9D%D0%BE%D0%B2%D0%B3%D0%BE%D1%80%D0%BE%D0%B4+(%D0%9D%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5)&amp;ie=UTF8&amp;t=&amp;z=12&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                  <div style="position: absolute;width: 80%;bottom: 10px;left: 0;right: 0;margin-left: auto;margin-right: auto;color: #000;text-align: center;"><small style="line-height: 1.8;font-size: 2px;background: #fff;">Powered by <a
+                        href="http://www.googlemapsgenerator.com/pt/">googlemapsgen (pt)</a> & <a href="http://eurodisneyaanbiedingen.nl/">eurodisneyaanbiedingen (nl)</a></small></div>
+                  <style>
+                    #gmap_canvas img {
+                      max-width: none !important;
+                      background: none !important
+                    }
+                  </style>
+                </div><br />
+              </div>
+              <div class="field-row">
+                <div class="field-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Имя" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="tel" placeholder="Телефон" id="" name="">
+                    </span>
+                  </label>
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <textarea class="field-text__input" placeholder="Сообщение"></textarea>
+                    </span>
+                  </label>
+                  <div class="fields-group">
+                    <div class="fields-group__item">
+                      <div class="field-radio">
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Отложить доставку</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fields-group__item">
+                      <label class="field-text field-text--sm">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="22/09/2019" id="" name="">
+                        </span>
+                      </label>
+                      <label class="field-text field-text--sm">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="22:00" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="field-col">
+                  <label class="field-text">
+                    <span class="field-text__input-wrap">
+                      <input class="field-text__input" type="text" placeholder="Улица" id="" name="">
+                    </span>
+                  </label>
+                  <div class="fields-group">
+                    <label class="field-text fields-group__item">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Дом" id="" name="">
+                      </span>
+                    </label>
+                    <label class="field-text fields-group__item">
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" placeholder="Квартира" id="" name="">
+                      </span>
+                    </label>
+                  </div>
+                  <div class="field-checkbox">
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id="" name="" checked>
+                        <span class="field-checkbox__name-text">Частный дом</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id="" name="">
+                        <span class="field-checkbox__name-text">Домофон не работает</span>
+                      </label>
+                    </div>
+                    <div class="field-checkbox__input-wrap">
+                      <label class="field-checkbox__name">
+                        <input class="field-checkbox__input" type="checkbox" id="" name="">
+                        <span class="field-checkbox__name-text">Шлагбаум</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="fields-group">
+                    <div class="fields-group__item">
+                      <div class="field-radio">
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Наличные</span>
+                          </label>
+                        </div>
+                        <div class="field-radio__input-wrap">
+                          <label class="field-radio__name">
+                            <input class="field-radio__input" type="radio" id="" name="demo-radio">
+                            <span class="field-radio__name-text">Карта</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fields-group__item">
+                      <label class="field-text field-text--sm">
+                        <span class="field-text__input-wrap">
+                          <input class="field-text__input" type="text" placeholder="Дать сдачу с:" id="" name="">
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field-actions">
+                <button class="btn btn--mw btn--main" type="submit">
+                  <span><svg class="btn__icon" width="17.33" height="15"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Берем</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <a class="page-phone page-phone--footer" href="tel:+88007771711"><span>+ 8 800</span> 777 17 11</a>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Доставка и оплата
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-wt page-wt--footer">
+            <div class="page-wt__item">
+              <span>Вс-чт</span>10:00-22:00
+            </div>
+            <div>
+              <span>Пт-сб</span>10:00-23:00
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
