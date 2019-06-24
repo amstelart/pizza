@@ -25,7 +25,57 @@ $transition-time:             0.3s !default;
   z-index: 10;
 
   @media (max-width: ($menu-desktop-width - 1)) {
-    display: none;
+    background-color: hsl(0, 0%, 11%);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 !important;
+  }
+
+  &__info {
+    // мобильный вид списка
+    @media (max-width: ($menu-desktop-width - 1)) {
+
+      // открытие/закрытие меню только в случае работающего JS
+
+      .js & {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.2s;
+      }
+
+      .js #{$block-name}--open & {
+        max-height: 100vh;
+        transition: max-height 0.6s;
+      }
+
+    }
+
+    // настольный вид списка
+    @media (min-width: $menu-desktop-width) {
+      display: none;
+    }
+  }
+
+  &__info-part {
+    padding: 16px 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 1.7;
+      letter-spacing: 0.49px;
+      color: #fff;
+      font-family: 'Exo 2', sans-serif;
+    }
+
+    &:last-of-type {
+      padding-bottom: 25px;
+    }
   }
 
   // первый уровень
@@ -66,6 +116,12 @@ $transition-time:             0.3s !default;
       & > #{$block-name}__link {
         color: #ff0000;
         font-weight: 700;
+
+        @media (max-width: ($menu-desktop-width - 1)) {
+          color: #000;
+          background-color: hsl(50, 100%, 56%);
+          font-weight: 500;
+        }
       }
     }
   }
@@ -102,6 +158,14 @@ $transition-time:             0.3s !default;
 
     @media (min-width: $screen-lg) {
       font-size: 11px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-family: 'Futura PT';
+      padding: 16px 28px;
     }
   }
 
@@ -153,6 +217,9 @@ $transition-time:             0.3s !default;
       }
     }
   }
+
+
+  // инфо
 
 
 

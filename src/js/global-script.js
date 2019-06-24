@@ -6,6 +6,9 @@ $( document ).ready(function() {
       autoplay: true,
       smartSpeed:1000,
       autoplayTimeout:5000,
+      animateOut: 'fadeOut',
+      touchDrag: false,
+      mouseDrag: false,
       nav: false,
       dots: false,
       loop: true,
@@ -20,6 +23,12 @@ $( document ).ready(function() {
   		event.stopPropagation();
   	});
   	//toggle menu end
+
+    // toggle basket
+    $(".card__toggle").click(function(e) {
+      e.preventDefault();
+      $(this).find(".item").toggleClass('item--active');
+    });
 
 });
 

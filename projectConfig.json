@@ -64,7 +64,8 @@
     "catalog-menu": [],
     "field-num": [],
     "delivery": [],
-    "basket": []
+    "basket": [],
+    "social": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

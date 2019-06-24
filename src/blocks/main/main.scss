@@ -6,13 +6,6 @@
 
   $block-name:                &; // #{$block-name}__element
 
-
-  @media (min-width: $screen-xl) {
-    background: svg-load('../blocks/main/img_to_bg/body-figure-01.svg') no-repeat,
-    svg-load('../blocks/main/img_to_bg/body-figure-02.svg') no-repeat;
-    background-position: left 60px top 60px, right bottom;
-  }
-
   &__inner {
     padding-top: 10px;
     padding-bottom: 80px;
@@ -27,6 +20,15 @@
     letter-spacing: 1.3px;
     color: hsl(274, 66%, 26%);
     text-transform: uppercase;
+    margin-left: 36px;
+
+    @media (min-width: $screen-sm) {
+      margin-left: 60px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-left: 40px;
+    }
   }
 
   &__catalog {
