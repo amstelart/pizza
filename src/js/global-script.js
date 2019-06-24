@@ -20,6 +20,7 @@ $( document ).ready(function() {
   		event.stopPropagation();
   	});
   	//toggle menu end
+
 });
 
 // Изоляция без jQuery

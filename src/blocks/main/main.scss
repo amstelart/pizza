@@ -6,35 +6,17 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  overflow-x: hidden;
+
+  @media (min-width: $screen-xl) {
+    background: svg-load('../blocks/main/img_to_bg/body-figure-01.svg') no-repeat,
+    svg-load('../blocks/main/img_to_bg/body-figure-02.svg') no-repeat;
+    background-position: left 60px top 60px, right bottom;
+  }
 
   &__inner {
     padding-top: 10px;
     padding-bottom: 80px;
-    position: relative;
     @include container;
-
-    // &:before {
-    //   content: "";
-    //   position: absolute;
-    //   top: 60px;
-    //   left: -290px;
-    //   background: svg-load('../blocks/main/img_to_bg/body-figure-01.svg') top left no-repeat;
-    //   width: 246px;
-    //   height: 479px;
-    //   z-index: -1;
-    // }
-    //
-    // &:after {
-    //   content: "";
-    //   background: svg-load('../blocks/main/img_to_bg/body-figure-02.svg') bottom right no-repeat;
-    //   position: absolute;
-    //   width: 569px;
-    //   height: 701px;
-    //   bottom: 0;
-    //   right: -320px;
-    //   z-index: -1;
-    // }
   }
 
   &__heading {

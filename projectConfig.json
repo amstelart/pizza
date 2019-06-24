@@ -32,7 +32,6 @@
     "field-actions": [],
     "form": [],
     "code": [],
-    "thumb": [],
     "alert": [],
     "to-top": [],
     "dropdown": [],
@@ -45,7 +44,6 @@
     "owl-carousel": [],
     "pagination": [],
     "breadcrumbs": [],
-    "nouislider": [],
     "off-canvas": [],
     "burger": [],
     "progress": [],
@@ -58,7 +56,6 @@
     "pie-chart": [],
     "fields-group": [],
     "tooltip": [],
-    "page-part": [],
     "main": [],
     "page-phone": [],
     "page-wt": [],
@@ -87,6 +84,7 @@
     "./node_modules/svg4everybody/dist/svg4everybody.js",
     "./node_modules/ismobilejs/isMobile.min.js",
     "./node_modules/owl.carousel/dist/owl.carousel.js",
+    "./node_modules/jquery-mask-plugin/dist/jquery.mask.min.js",
     "./node_modules/object-fit-images/dist/ofi.js"
   ],
   "addJsAfter": [
