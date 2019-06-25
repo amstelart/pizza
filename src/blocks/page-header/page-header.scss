@@ -9,6 +9,14 @@
   background: $gray-darkest;
   position: relative;
 
+  @media (max-width: ($menu-desktop-width - 1)) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+  }
+
   &__inner {
     @include container;
     display: flex;
