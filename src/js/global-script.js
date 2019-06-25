@@ -30,6 +30,18 @@ $( document ).ready(function() {
       $(this).find(".item").toggleClass('item--active');
     });
 
+    var fixNav = 500;
+  	$(window).scroll(function() {
+  		var scroll = $(this).scrollTop();
+  		if ( scroll >= fixNav ) {
+  				$('.catalog-menu').addClass('catalog-menu--sticky');
+  			}
+  			else {
+  					$('.catalog-menu').removeClass('catalog-menu--sticky');
+  			}
+  	});
+  	//animate header end
+
 });
 
 // Изоляция без jQuery
