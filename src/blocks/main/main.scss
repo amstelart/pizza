@@ -20,15 +20,15 @@
     letter-spacing: 1.3px;
     color: hsl(274, 66%, 26%);
     text-transform: uppercase;
-    margin-left: 36px;
-
-    @media (min-width: $screen-sm) {
-      margin-left: 60px;
-    }
-
-    @media (min-width: $screen-xl) {
-      margin-left: 40px;
-    }
+    // margin-left: 36px;
+    //
+    // @media (min-width: $screen-sm) {
+    //   margin-left: 60px;
+    // }
+    //
+    // @media (min-width: $screen-xl) {
+    //   margin-left: 40px;
+    // }
   }
 
   &__catalog {

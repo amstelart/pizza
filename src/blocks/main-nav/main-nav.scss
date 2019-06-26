@@ -124,6 +124,15 @@ $transition-time:             0.3s !default;
         }
       }
     }
+
+    @media (min-width: $menu-desktop-width) {
+
+      &:last-child {
+        #{$block-name}__link {
+          padding-right: 0;
+        }
+      }
+    }
   }
 
   &__link {
