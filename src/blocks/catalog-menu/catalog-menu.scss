@@ -26,7 +26,7 @@
       bottom: auto;
       opacity: 1;
       z-index: 10;
-      height: 46px;
+      height: 43px;
       animation: slideInDown 1s 1 ease-in-out;
 
       .logo,
@@ -49,7 +49,7 @@
       }
 
       #{$block-name}__link {
-        padding: 1.1em;
+        padding: 12px 8px;
       }
 
       #{$block-name}__icon {
