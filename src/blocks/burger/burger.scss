@@ -68,4 +68,8 @@ $toggler-part-bg-color:       hsl(50, 100%, 56%);
       }
     }
   }
+
+  &:focus {
+    outline: none;
+  }
 }

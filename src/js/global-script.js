@@ -17,7 +17,8 @@ $( document ).ready(function() {
 
     //toggle menu
   	$('#catalog-menu-toggler').click(function (event) {
-  		$('catalog-menu').removeClass('catalog-menu--open');
+      $('#main-nav-toggler').removeClass('burger--close');
+      $('#main-nav').removeClass('main-nav--open');
   		$('.catalog-menu').toggleClass('catalog-menu--open');
 
   		event.stopPropagation();

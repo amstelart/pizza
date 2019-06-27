@@ -48,6 +48,10 @@
         margin: 0 30px;
       }
 
+      #{$block-name}__link {
+        padding: 1.1em;
+      }
+
       #{$block-name}__icon {
         display: none;
       }
@@ -209,6 +213,10 @@
         vertical-align: middle;
         margin-right: 8px;
       }
+    }
+
+    &:focus {
+      outline: none;
     }
 
     @media (min-width: $menu-desktop-width) {

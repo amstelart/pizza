@@ -1,6 +1,157 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+// // В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
+// // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+//
+// .page-header {
+//
+//   $block-name:                &; // #{$block-name}__element
+//
+//   background: $gray-darkest;
+//   position: relative;
+//
+//   @media (max-width: ($menu-desktop-width - 1)) {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     z-index: 20;
+//   }
+//
+//   &__inner {
+//     @include container;
+//     display: flex;
+//     padding-right: 220px;
+//     position: relative;
+//
+//     @media (min-width: $screen-lg) {
+//       padding-right: 280px;
+//     }
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       flex-direction: column;
+//       padding-right: 15px;
+//     }
+//   }
+//
+//   .page-info-line {
+//     flex-grow: 1;
+//     text-align: center;
+//     color: #fff;
+//     font-size: 11px;
+//     font-family: 'Futura PT';
+//     font-weight: 700;
+//     letter-spacing: 0.54px;
+//   }
+//
+//   &__cont {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     padding-bottom: 5px;
+//     padding-top: 5px;
+//
+//     @media (min-width: $screen-lg) {
+//       padding-bottom: 15px;
+//       padding-top: 15px;
+//     }
+//   }
+//
+//   &__cont-top {
+//     display: flex;
+//     justify-content: flex-end;
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       display: none;
+//     }
+//   }
+//
+//   &__cont-bottom {
+//     display: flex;
+//     align-items: flex-end;
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       align-items: center;
+//     }
+//
+//     .logo {
+//       margin-right: 25px;
+//       max-width: 162px;
+//
+//       @media (min-width: $screen-md) {
+//         margin-top: -10px;
+//       }
+//
+//       @media (min-width: $screen-lg) {
+//         margin-right: 40px;
+//         max-width: 223px;
+//       }
+//
+//       @media (max-width: ($menu-desktop-width - 1)) {
+//         margin-right: auto;
+//         width: 100px;
+//       }
+//     }
+//
+//     .main-nav--header {
+//       margin-left: auto;
+//       margin-top: 15px;
+//     }
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       margin-top: 0;
+//       height: 36px;
+//     }
+//   }
+//
+//   &__slider {
+//
+//     .slider-item {
+//       height: 407px;
+//       background-size: cover;
+//       background-position: center center;
+//     }
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       display: none !important;
+//     }
+//   }
+//
+//   @media (max-width: ($menu-desktop-width - 1)) {
+//     background-color: hsl(50, 100%, 56%);
+//   }
+//
+//   &__mobile {
+//     background-color: hsl(0, 0%, 11%);
+//     margin-left: -15px;
+//     margin-right: -15px;
+//     height: 51px;
+//     display: flex;
+//   }
+//
+//   &__mobile-l,
+//   &__mobile-r {
+//
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       min-width: 80px;
+//       display: flex;
+//       align-items: center;
+//     }
+//   }
+//
+//   &__mobile-l {
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       padding-left: 16px;
+//       justify-content: flex-start;
+//     }
+//   }
+//
+//   &__mobile-r {
+//     @media (max-width: ($menu-desktop-width - 1)) {
+//       padding-right: 16px;
+//       justify-content: flex-end;
+//     }
+//   }
+// }
 
 .page-header {
 
@@ -10,6 +161,7 @@
   position: relative;
 
   @media (max-width: ($menu-desktop-width - 1)) {
+    background: #ffda1f;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,82 +169,114 @@
     z-index: 20;
   }
 
-  &__inner {
-    @include container;
-    display: flex;
-    padding-right: 220px;
-    position: relative;
-
-    @media (min-width: $screen-lg) {
-      padding-right: 280px;
-    }
-
-    @media (max-width: ($menu-desktop-width - 1)) {
-      flex-direction: column;
-      padding-right: 15px;
-    }
-  }
-
-  &__cont {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__cont-top {
-    display: flex;
-    justify-content: flex-end;
-
-    .page-info-line {
-      flex-grow: 1;
-      text-align: center;
-      color: #fff;
-      font-size: 11px;
-      font-family: 'Futura PT';
-      font-weight: 700;
-      letter-spacing: 0.54px;
-    }
-
-    .page-wt--header {
-
-      @media (min-width: $screen-lg) {
-        margin-top: 15px;
-      }
-    }
+  .header-info-line {
+    color: #fff;
+    font-size: 11px;
+    font-family: 'Futura PT';
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     @media (max-width: ($menu-desktop-width - 1)) {
       display: none;
     }
   }
 
-  &__cont-bottom {
-    margin-top: -20px;
+  &__inner {
+    height: 86px;
     display: flex;
-    align-items: center;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
 
-    .logo {
-      margin-right: 25px;
-      max-width: 162px;
-
-      @media (min-width: $screen-lg) {
-        margin-right: 40px;
-        max-width: 223px;
-      }
-
-      @media (max-width: ($menu-desktop-width - 1)) {
-        margin-right: auto;
-        width: 100px;
-      }
+    @media (min-width: $screen-lg) {
+      height: 107px;
     }
 
-    .main-nav--header {
-      margin-left: auto;
-      margin-top: 15px;
+    @media (min-width: $screen-xl) {
+      width: 1270px;
     }
 
     @media (max-width: ($menu-desktop-width - 1)) {
-      margin-top: 0;
-      height: 36px;
+      height: 38px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    width: 150px;
+    margin-right: 20px;
+    align-items: center;
+
+    @media (min-width: $screen-lg) {
+      width: 223px;
+      margin-right: 40px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      width: 110px;
+    }
+
+    .logo {
+
+      @media (min-width: $menu-desktop-width) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  &__cont {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      position: static;
+    }
+
+    .header-cont {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &__left {
+        @media (max-width: ($menu-desktop-width - 1)) {
+          flex-grow: 1;
+          text-align: right;
+        }
+      }
+
+      &__right {
+        text-align: right;
+
+        @media (max-width: ($menu-desktop-width - 1)) {
+          text-align: left;
+        }
+
+        .page-wt--header {
+          @media (max-width: ($menu-desktop-width - 1)) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__basket {
+    position: relative;
+    min-width: 220px;
+
+    @media (min-width: $screen-lg) {
+      min-width: 265px;
+    }
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: none;
     }
   }
 
@@ -109,16 +293,14 @@
     }
   }
 
-  @media (max-width: ($menu-desktop-width - 1)) {
-    background-color: hsl(50, 100%, 56%);
-  }
-
   &__mobile {
     background-color: hsl(0, 0%, 11%);
-    margin-left: -15px;
-    margin-right: -15px;
-    height: 51px;
-    display: flex;
+    height: 52px;
+    display: none;
+
+    @media (max-width: ($menu-desktop-width - 1)) {
+      display: flex;
+    }
   }
 
   &__mobile-l,

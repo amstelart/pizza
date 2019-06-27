@@ -7,6 +7,7 @@
 
     function mainNavVisibleToggle(e) {
       e.preventDefault();
+      $('.catalog-menu').removeClass('catalog-menu--open');
       toggler.classList.toggle('burger--close'); // модификатор иконки (должен быть .burger)
       document.getElementById('main-nav').classList.toggle('main-nav--open');
     }

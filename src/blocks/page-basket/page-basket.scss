@@ -8,7 +8,7 @@
 
   @media (min-width: $menu-desktop-width) {
     width: 220px;
-    height: 177px;
+    height: 150px;
     background-image: svg-load('../blocks/page-basket/img_to_bg/basket-bg-pattern.svg');
     background-repeat: no-repeat;
     background-position: center top -20px;
@@ -23,6 +23,7 @@
   @media (min-width: $screen-lg) {
     padding-right: 280px;
     width: 265px;
+    height: 170px;
     background-size: auto;
   }
 
@@ -38,9 +39,13 @@
       align-items: center;
       display: flex;
       position: absolute;
-      top: 25px;
+      top: 15px;
       left: 50%;
       transform: translateX(-50%);
+    }
+
+    @media (min-width: $screen-lg) {
+      top: 25px;
     }
   }
 

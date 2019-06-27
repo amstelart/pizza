@@ -27,6 +27,9 @@
 
   &--header {
 
+    display: inline-block;
+    margin-bottom: 4px;
+
     @media (max-width: ($menu-desktop-width - 1)) {
       color: #000;
     }
