@@ -31,7 +31,7 @@
     font-weight: 700;
     letter-spacing: 0.73px;
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
   }
 
   &__toggle {
@@ -39,7 +39,7 @@
     font-family: 'PT Sans Narrow', sans-serif;
     display: flex;
     justify-content: center;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 
     .item {
       font-size: 14px;
@@ -74,24 +74,26 @@
   &__action {
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-between;
+    max-width: 200px;
+    margin: auto;
     margin-top: auto;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 
   .field-num--card {
     max-width: 100px;
-    margin: 0 15px;
+    margin: 0 0 0 72px;
   }
 
   &__weight-num {
-    margin: 0 15px;
     color: #a3a3a3;
     white-space: nowrap;
     font-size: 13px;
     letter-spacing: 0.54px;
     font-family: 'PT Sans Narrow', sans-serif;
-    line-height: $line-height;
+    line-height: 1.375em;
+    margin-left: 10px;
 
     span {
       font-weight: 700;
@@ -102,7 +104,8 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: auto;
   }
 
   &__price {
@@ -112,10 +115,12 @@
     font-weight: normal;
     letter-spacing: 1.34px;
     text-align: center;
-    line-height: $line-height;
+    line-height: 1.375em;
     white-space: nowrap;
     margin-top: auto;
-    margin: 0 10px;
+    margin-left: 40px;
+    margin-right: 20px;
+    max-width: 240px;
 
     span {
       font-weight: 700;
