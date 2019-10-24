@@ -1,0 +1,75 @@
+// В этом файле должны быть стили для БЭМ-блока delivery-terms, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.delivery-terms {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-family: 'Futura PT';
+
+  &__caption {
+    margin-bottom: 35px;
+
+    p {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__list {
+    @include row($grid-gutter-width, 30px, 4px, 4px, 4px, 4px);
+    margin-bottom: 35px;
+
+    .delivery-terms-card {
+      @include col();
+      @include col(md, 4, $grid-columns, 8px);
+    }
+  }
+
+  &__map {
+    h5 {
+      color: #4a1770;
+      font-family: 'Futura PT';
+      text-transform: uppercase;
+    }
+  }
+}
+
+.delivery-terms-card {
+
+  .inner {
+    background: $color-main;
+    padding: 20px;
+    height: 100%;
+    color: #fff;
+
+    p {
+      font-family: 'Futura PT';
+      letter-spacing: 0.68px;
+      font-size: 14px;
+      text-transform: uppercase;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &:nth-child(1) {
+    .inner {
+      background-color: hsl(271, 63%, 35%);
+    }
+  }
+
+  &:nth-child(2) {
+    .inner {
+      background-color: hsl(258, 71%, 53%);
+    }
+  }
+
+  &:nth-child(3) {
+    .inner {
+      background-color: hsl(276, 66%, 62%);
+    }
+  }
+}

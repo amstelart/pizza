@@ -65,7 +65,8 @@
     "field-num": [],
     "delivery": [],
     "basket": [],
-    "social": []
+    "social": [],
+    "delivery-terms": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
