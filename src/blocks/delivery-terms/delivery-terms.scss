@@ -37,6 +37,11 @@
 
 .delivery-terms-card {
 
+  @media (max-width: ($screen-md - 1)) {
+    margin-bottom: 27px;
+    min-height: 127px;
+  }
+
   .inner {
     background: $color-main;
     padding: 20px;
