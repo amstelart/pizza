@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Donatello PIZZA</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png"> -->
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Exo+2:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+        <div class="page-header__inner">
+          <div class="page-header__logo">
+            <a href="index.html" class="logo">
+              <img src="img/logo.svg" alt="logo">
+            </a>
+          </div>
+          <div class="page-header__cont">
+            <div class="header-info-line">СКИДКА 20% на все пиццы до конца мая!</div>
+            <div class="header-cont">
+              <div class="header-cont__left">
+                <a class="page-phone page-phone--header" href="tel:+88007771711"><span>+ 8 800</span> 777 17 11</a>
+              </div>
+              <div class="header-cont__right">
+                <div class="page-wt page-wt--header">
+                  <div class="page-wt__item">
+                    <span>Вс-чт</span>10:00-22:00
+                  </div>
+                  <div>
+                    <span>Пт-сб</span>10:00-23:00
+                  </div>
+                </div>
+                <nav id="main-nav" class="main-nav main-nav--header" role="navigation">
+                  <ul class="main-nav__list">
+                    <li class="main-nav__item main-nav__item--active">
+                      <a href="#" class="main-nav__link">
+                        Акции
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="delivery.html" class="main-nav__link">
+                        Доставка и оплата
+                      </a>
+                    </li>
+                    <li class="main-nav__item">
+                      <a href="#" class="main-nav__link">
+                        О нас
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="main-nav__info">
+                    <div class="main-nav__info-part">
+                      <p>Нижний Новгород<br>ул. Ленина 15/a</p>
+                    </div>
+                    <div class="main-nav__info-part">
+                      <div class="page-wt page-wt--nav">
+                        <div class="page-wt__item">
+                          <span>+8 800</span>777 17 11
+                        </div>
+                        <div class="page-wt__item">
+                          <span>Вс-чт</span>10:00-22:00
+                        </div>
+                        <div class="page-wt__item">
+                          <span>Пт-сб</span>10:00-23:00
+                        </div>
+                      </div>
+                      <ul class="social">
+                        <li class="social__link-wrap  social__link-wrap--inst" title="Instagram">
+                          <a class="social__link" href="#">
+                            <svg width="33" height="33" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero" fill="#9013FE"><path d="M21.36 8.756h-9.809a2.843 2.843 0 0 0-2.84 2.84v9.809a2.843 2.843 0 0 0 2.84 2.84h9.81a2.843 2.843 0 0 0 2.839-2.84v-9.81a2.843 2.843 0 0 0-2.84-2.839zm-4.904 12.843a5.104 5.104 0 0 1-5.099-5.099 5.104 5.104 0 0 1 5.099-5.098 5.104 5.104 0 0 1 5.099 5.098 5.105 5.105 0 0 1-5.1 5.099zm5.262-9.143a1.208 1.208 0 0 1-1.206-1.207c0-.665.54-1.206 1.206-1.206.666 0 1.207.541 1.207 1.206 0 .665-.541 1.207-1.207 1.207z"/><path d="M16.456 13.556A2.948 2.948 0 0 0 13.51 16.5a2.948 2.948 0 0 0 2.945 2.944A2.948 2.948 0 0 0 19.4 16.5a2.948 2.948 0 0 0-2.944-2.944z"/><path d="M16.456 0C7.368 0 0 7.368 0 16.456 0 25.543 7.368 32.91 16.456 32.91c9.087 0 16.455-7.368 16.455-16.455C32.911 7.368 25.543 0 16.456 0zm9.898 21.405a5 5 0 0 1-4.994 4.994h-9.809a5 5 0 0 1-4.994-4.994v-9.81a5 5 0 0 1 4.994-4.994h9.81a5 5 0 0 1 4.993 4.994v9.81z"/></g></svg>
+                          </a>
+                        </li>
+                        <li class="social__link-wrap  social__link-wrap--vk" title="ВКонтакте">
+                          <a class="social__link" href="#">
+                            <svg width="33" height="33" xmlns="http://www.w3.org/2000/svg"><path d="M16.383 32.765C7.335 32.765 0 25.43 0 16.383 0 7.335 7.335 0 16.383 0c9.047 0 16.382 7.335 16.382 16.383 0 9.047-7.335 16.382-16.382 16.382zm-.62-9.197h1.287s.388-.043.586-.257c.183-.196.177-.564.177-.564s-.025-1.726.776-1.98c.789-.25 1.803 1.668 2.877 2.405.813.558 1.43.436 1.43.436l2.873-.04s1.502-.093.79-1.274c-.059-.097-.415-.874-2.136-2.472-1.801-1.672-1.56-1.401.61-4.293 1.321-1.762 1.85-2.837 1.684-3.297-.157-.439-1.129-.323-1.129-.323l-3.234.02s-.24-.033-.418.074c-.174.104-.286.347-.286.347s-.512 1.363-1.194 2.522c-1.44 2.446-2.017 2.575-2.252 2.423-.548-.354-.41-1.422-.41-2.18 0-2.37.359-3.36-.7-3.615-.352-.085-.611-.141-1.51-.15-1.155-.012-2.131.003-2.685.274-.367.18-.651.582-.478.605.213.029.698.13.954.48.332.451.32 1.464.32 1.464s.19 2.79-.445 3.137c-.436.238-1.034-.248-2.318-2.467-.658-1.136-1.155-2.393-1.155-2.393s-.095-.234-.266-.36c-.208-.152-.497-.2-.497-.2l-3.074.02s-.461.012-.63.213c-.151.178-.013.548-.013.548s2.407 5.63 5.131 8.467c2.499 2.6 5.336 2.43 5.336 2.43z" fill-rule="nonzero" fill="#9013FE"/></svg>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="page-header__basket">
+            <div class="page-basket">
+              <a href="checkout.html" class="page-basket__inner">
+                <span class="page-basket__count"><span>2</span></span>
+                <span class="page-basket__cost"><span>1320 р</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__mobile">
+          <div class="page-header__mobile-l">
+            <button id="main-nav-toggler" class="main-nav__toggler burger"><span></span></button>
+          </div>
+          <button id="catalog-menu-toggler" class="catalog-menu__toggler"><span><svg class="btn__icon" width="9" height="7"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use></svg>Меню</span></button>
+          <div class="page-header__mobile-r">
+            <div class="page-basket">
+              <a href="checkout.html" class="page-basket__inner">
+                <span class="page-basket__count"><span>2</span></span>
+                <span class="page-basket__cost"><span>1320 р</span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="page-header__slider">
+          <div class="owl-carousel" id="header-slider">
+            <div class="slider-item" style="background-image: url('img/slider-item-img-1.jpg');"></div>
+            <div class="slider-item" style="background-image: url('img/slider-item-img-2.jpg');"></div>
+            <div class="slider-item" style="background-image: url('img/slider-item-img-3.jpg');"></div>
+          </div>
+        </div>
+        <nav class="catalog-menu">
+          <div class="catalog-menu__inner">
+            <a href="/" class="logo">
+              <img src="img/logo-white.svg" alt="logo">
+            </a>
+            <ul class="catalog-menu__list">
+              <li class="catalog-menu__item catalog-menu__item--active">
+                <a href="#" class="catalog-menu__link">
+                  <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-pizza"></use></svg>
+                  <span class="catalog-menu__name">Пицца</span>
+                </a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="#" class="catalog-menu__link">
+                  <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-snacks"></use></svg>
+                  <span class="catalog-menu__name">Закуски</span>
+                </a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="#" class="catalog-menu__link">
+                  <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-salads"></use></svg>
+                  <span class="catalog-menu__name">Салаты</span>
+                </a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="#" class="catalog-menu__link">
+                  <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-drinks"></use></svg>
+                  <span class="catalog-menu__name">Напитки</span>
+                </a>
+              </li>
+              <li class="catalog-menu__item">
+                <a href="#" class="catalog-menu__link">
+                  <svg class="catalog-menu__icon" width="58" height="46"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#catalog-icon-dessert"></use></svg>
+                  <span class="catalog-menu__name">Десерты</span>
+                </a>
+              </li>
+            </ul>
+            <div class="page-basket">
+              <a href="checkout.html" class="page-basket__inner">
+                <span class="page-basket__count"><span>2</span></span>
+                <span class="page-basket__cost"><span>1320 р</span></span>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <main class="main" role="main">
+
+        <div class="main__inner">
+          <div class="container-narrow">
+            <div class="privacy-policy">
+                <h4>Политика в отношении обработки персональных данных</h4>
+                <h4>1. Общие положения</h4>
+                <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных Зейналова Табриза Илхамовича (далее – Оператор).</p>
+                <p>1.&#8195;Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+                <p>2.&#8195;Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта http://Donatellopizza.ru.</p>
+                <h4>2. Основные понятия, используемые в Политике</h4>
+                <p>1.&#8195;Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</p>
+                <p>2.&#8195;Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);</p>
+                <p>3.&#8195;Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу http://Donatellopizza.ru;</p>
+                <p>4.&#8195;Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;</p>
+                <p>5.&#8195;Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;</p>
+                <p>6.&#8195;Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;</p>
+                <p>7.&#8195;Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;</p>
+                <p>8.&#8195;Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта http://Donatellopizza.ru;</p>
+                <p>9.&#8195;Пользователь – любой посетитель веб-сайта http://Donatellopizza.ru;</p>
+                <p>10.&#8195;Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;</p>
+                <p>11.&#8195;Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;</p>
+                <p>12.&#8195;Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;</p>
+                <p>13.&#8195;Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) результате которых уничтожаются материальные носители персональных данных.</p>
+                <h4>3. Оператор может обрабатывать следующие персональные данные Пользователя</h4>
+                <p>1.&#8195;Фамилия, имя, отчество;</p>
+                <p>2.&#8195;Электронный адрес;</p>
+                <p>3.&#8195;Номера телефонов;</p>
+                <p>4.&#8195;Год, месяц, дата и место рождения;</p>
+                <p>5.&#8195;Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).</p>
+                <p>6.&#8195;Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.</p>
+                <h4>4. Цели обработки персональных данных</h4>
+                <p>1.&#8195;Цель обработки персональных данных Пользователя — Уточнение деталей заказа.</p>
+                <p>2.&#8195;Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты donatello-pizza@mail.ru с пометкой «Отказ от уведомлениях о новых продуктах и услугах и специальных предложениях».</p>
+                <p>3.&#8195;Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</p>
+                <h4>5. Правовые основания обработки персональных данных</h4>
+                <p>1.&#8195;Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте http://Donatellopizza.ru. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</p>
+                <p>2.&#8195;Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</p>
+                <h4>6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</h4>
+                <p>Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+                <p>1.&#8195;Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>
+                <p>2.&#8195;Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</p>
+                <p>3.&#8195;В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора donatello-pizza@mail.ru с пометкой «Актуализация персональных данных».</p>
+                <p>4.&#8195;Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператора donatello-pizza@mail.ru с пометкой «Отзыв согласия на обработку персональных данных».</p>
+                <h4>7. Трансграничная передача персональных данных</h4>
+                <p>1.&#8195;Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.</p>
+                <p>2.&#8195;Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.</p>
+                <h4>8. Заключительные положения</h4>
+                <p>1.&#8195;Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты donatello-pizza@mail.ru.</p>
+                <p>2.&#8195;В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+                <p>3.&#8195;Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу http://Donatellopizza.ru.</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__inner">
+          <a class="page-phone page-phone--footer" href="tel:+88007771711"><span>+ 8 800</span> 777 17 11</a>
+          <nav class="main-nav" role="navigation">
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+                <a href="#" class="main-nav__link">
+                  Акции
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Доставка и оплата
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  О нас
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="page-wt page-wt--footer">
+            <div class="page-wt__item">
+              <span>Вс-чт</span>10:00-22:00
+            </div>
+            <div>
+              <span>Пт-сб</span>10:00-23:00
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+
+  <div id="modal-1" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Вы не заполнили <br><span>форму заказа</span></h4>
+        </div>
+        <div class="modal__footer">
+          <button type="button" class="btn btn--blue" data-dismiss="modal">ОК! ХОРОШО!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-2" class="modal" tabindex="-1" role="dialog">
+    <div class="modal__dialog" role="document">
+      <div class="modal__content">
+        <div class="modal__header">
+          <a href="#" class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></a>
+          <h4 class="modal__title">Удалить позицию <span>Уверен?</span></h4>
+        </div>
+        <div class="modal__footer">
+          <div class="btn-group">
+            <button type="button" class="btn btn--white" data-dismiss="modal">Да, не хочу это есть</button>
+            <button type="button" class="btn btn--blue" data-dismiss="modal">Нет, оставить в корзине</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+
+</html>
