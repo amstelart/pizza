@@ -1,0 +1,100 @@
+// В этом файле должны быть стили для БЭМ-блока about, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.about {
+
+  $block-name:                &; // #{$block-name}__element
+
+  font-family: 'Futura PT';
+
+  &__logo {
+    text-align: right;
+    margin-bottom: 30px;
+    @media (max-width: ($screen-sm - 1)) {
+      margin-top: -65px;
+      img {
+        max-width: 135px;
+      }
+    }
+
+    img {
+      max-width: 160px;
+    }
+  }
+
+  &__part {
+    .btn-wrap {
+      text-align: center;
+
+      .btn {
+        min-width: 200px;;
+      }
+    }
+  }
+
+  .about-caption {
+    @media (max-width: ($screen-sm - 1)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'Futura PT';
+    margin: 35px 0 40px;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__row {
+    @include row($grid-gutter-width, 10px, 10px, 10px, 10px, 10px);
+  }
+
+  &__col {
+    @include col();
+    @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-family: 'Futura PT';
+      font-size: 18px;
+      margin-top: 0;
+    }
+  }
+
+}
+
+.about-box-img {
+  height: 100%;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.about-box-text {
+  background-color: #ab5cde;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+
+  span {
+    font-family: 'Intro';
+    color: #fff;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+}

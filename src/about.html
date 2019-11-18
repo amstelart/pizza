@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html class="no-js page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Donatello PIZZA</title>
+  <meta name="description" content="">
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main" role="main">
+
+        <div class="main__inner">
+          <div class="container-narrow">
+            <h1 class="main__heading">О нас</h1>
+            <div class="about">
+                <div class="about__logo">
+                    <img src="img/logo.svg" alt="logo">
+                </div>
+                <div class="about__part">
+                    <div class="about__row">
+                        <div class="about__col">
+                          <div class="about-caption">
+                              <p><b>Донателло Пицца!</b> <br>
+                                Доставка вкуснейшей пиццы<br>
+                                в Нижнем Новгороде!</p> 
+                              <p>
+                                Работаем: <br>
+                                Вс-чт 10:00-22:00 <br>
+                                Пт-сб 10:00-23:00
+                              </p>
+                          </div>
+                        </div>
+                        <div class="about__col">
+                          <img src="img/about-photo-01.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="about__part">
+                    <div class="about__title">Мы пришли чтобы делать <span>лучшую пиццу</span> в Нижнем Новгороде. </div>
+                    <div class="about__row">
+                        <div class="about__col">
+                          <div class="about-box-img">
+                              <img src="img/about-photo-02.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="about__col">
+                          <div class="about-box-text">
+                            <span>Очень много сыра</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__part">
+                    <div class="about__title"><span>Сыра не бывает много</span> – никогда!</div>
+                    <div class="about__row">
+                        <div class="about__col">
+                            <div class="about-box-text" style="background-color: #6633dc;">
+                              <span>Самые свежие продукты</span>
+                            </div>
+                        </div>
+                        <div class="about__col">
+                          <div class="about-box-img">
+                              <img src="img/about-photo-03.jpg" alt="">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__part">
+                    <div class="about__title">Мы берем <span>самое лучшее</span> для нашей пиццы!</div>
+                    <div class="about__row">
+                        <div class="about__col">
+                          <div class="about-box-img">
+                              <img src="img/about-photo-04.jpg" alt="">
+                          </div>
+                        </div>
+                        <div class="about__col">
+                          <div class="about-box-text" style="background-color: #5c2192;">
+                            <span>Молниеносная доставка</span>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__part">
+                    <div class="about__title"><span>Доставить пиццу вовремя</span> это закон!</div>
+                    <div class="btn-wrap">
+                        <a class="btn btn--main" href="#"><span><svg class="btn__icon" width="17.33" height="15">
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#btn-icon-arrow"></use>
+                          </svg>Вперед!</span></a>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+  </div>
+
+  @@include('blocks/modal/modal.html')
+  @@include('_include/page_bottom.html')
+</body>
+
+</html>

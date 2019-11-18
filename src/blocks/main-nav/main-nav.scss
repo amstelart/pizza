@@ -114,7 +114,7 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #ff0000;
+        color: #ab5cde;
         font-weight: 700;
 
         @media (max-width: ($menu-desktop-width - 1)) {
@@ -148,7 +148,7 @@ $transition-time:             0.3s !default;
     &:hover,
     &:focus {
       text-decoration: none;
-      color: #ff0000;
+      color: #ab5cde;
     }
 
     @media (min-width: $screen-lg) {

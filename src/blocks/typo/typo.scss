@@ -82,6 +82,17 @@ $border-radius:               3px !default;
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Futura PT';
+  src: url('../fonts/FuturaPT-Light.eot');
+  src: local('../fonts/Futura PT Light'), local('FuturaPT-Light'),
+      url('../fonts/FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaPT-Light.woff') format('woff'),
+      url('../fonts/FuturaPT-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
 body {
   // ТОЛЬКО типографика!
   font-family: $font-family;

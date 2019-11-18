@@ -66,7 +66,8 @@
     "delivery": [],
     "basket": [],
     "social": [],
-    "delivery-terms": []
+    "delivery-terms": [],
+    "about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
