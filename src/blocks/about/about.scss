@@ -7,6 +7,7 @@
   $block-name:                &; // #{$block-name}__element
 
   font-family: 'Futura PT';
+  color: #000;
 
   &__logo {
     text-align: right;
@@ -34,6 +35,9 @@
   }
 
   .about-caption {
+
+    line-height: 1.3;
+
     @media (max-width: ($screen-sm - 1)) {
       margin-bottom: 30px;
     }
