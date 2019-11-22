@@ -67,7 +67,8 @@
     "basket": [],
     "social": [],
     "delivery-terms": [],
-    "about": []
+    "about": [],
+    "footer-nav": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

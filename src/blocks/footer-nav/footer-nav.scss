@@ -1,0 +1,59 @@
+// В этом файле должны быть стили для БЭМ-блока footer-nav, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.footer-nav {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    position: relative;
+
+    &--active {
+
+      & > #{$block-name}__link {
+        color: #ab5cde;
+        font-weight: 700;
+      }
+    }
+
+    @media (min-width: $menu-desktop-width) {
+
+      &:last-child {
+        #{$block-name}__link {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  &__link {
+    font-family: 'Futura PT';
+    display: block;
+    padding: 0 0.5em;
+    font-size: 9px;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: #ab5cde;
+    }
+
+    @media (min-width: $screen-lg) {
+      font-size: 11px;
+    }
+  }
+
+}
