@@ -88,6 +88,10 @@
     &--social {
       margin-right: 0;
 
+      .col-title {
+        margin-bottom: 18px;
+      }
+
       @media (min-width: $screen-md) {
         text-align: right;
         flex-grow: 0;
@@ -132,7 +136,7 @@
   }
 
   &__bottom {
-    border-top: 2px solid rgba(#fff, .25);
+    border-top: 1px solid rgba(#fff, .5);
     color: #fff;
     font-family: 'Futura PT';
     font-size: 10px;
