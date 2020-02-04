@@ -2,6 +2,23 @@
 // модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
 // Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
 
+.basket-heading {
+  display: flex;
+  align-items: center;
+
+  .close {
+    margin-left: auto;
+    margin-right: 10px;
+
+    >span {
+      &:before,
+      &:after {
+        background: #64367e;
+      }
+    }
+  }
+}
+
 .basket {
 
   $block-name:                &; // #{$block-name}__element
@@ -77,7 +94,7 @@
 
 .basket-footer {
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 10px;
 
   @media (min-width: $screen-md) {
     padding-left: 85px;
