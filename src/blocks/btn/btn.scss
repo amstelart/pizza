@@ -63,17 +63,19 @@ $border-radius:               3px !default;
   }
 
   &__icon {
-    display: inline-block;
-    vertical-align: middle;
 
     &.icon-left {
       transform: translateY(-10%) rotate(90deg);
       margin: 0;
+      display: inline-block;
+      vertical-align: middle;
     }
 
     &.icon-right {
       transform: translateY(-10%) rotate(-90deg);
       margin: 0;
+      display: inline-block;
+      vertical-align: middle;
     }
   }
 
