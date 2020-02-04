@@ -76,8 +76,12 @@
 }
 
 .basket-footer {
-  padding-left: 85px;
+  padding-left: 15px;
   padding-right: 15px;
+
+  @media (min-width: $screen-md) {
+    padding-left: 85px;
+  }
 }
 
 .basket-delivery {
@@ -86,6 +90,7 @@
   font-size: 11px;
   letter-spacing: 0.54px;
   padding: 10px 0;
+  margin-right: 25px;
 
   &__text {
     margin-right: auto;
@@ -112,8 +117,25 @@
     font-weight: bold;
     letter-spacing: 1.17px;
   }
+
+  .close {
+    margin-left: 10px;
+    align-self: center;
+  }
 }
 
 .basket-get {
-  text-align: right;
+  text-align: center;
+
+  @media (min-width: $screen-md) {
+    text-align: right;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  .btn + .btn {
+    margin-left: 20px;
+  }
 }

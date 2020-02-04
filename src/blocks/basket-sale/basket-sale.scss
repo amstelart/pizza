@@ -1,0 +1,35 @@
+// В этом файле должны быть стили для БЭМ-блока basket-sale, его элементов, 
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.basket-sale {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  font-family: 'Futura PT';
+  font-size: 11px;
+  letter-spacing: 0.54px;
+  padding: 10px 0;
+  margin-right: 25px;
+
+  &__text {
+    margin-right: auto;
+  }
+
+  &__value {
+    display: flex;
+    align-content: center;
+
+    .sale-percent {
+      font-size: 10px;
+      font-weight: 300;
+      margin-right: 10px;
+    }
+
+    .sale-price {
+      font-size: 19px;
+      color: rgba(#000, 0.13);
+    }
+  }
+}
